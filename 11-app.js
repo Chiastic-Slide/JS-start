@@ -10,19 +10,19 @@ const filtredByDash = arr.filter(el => el.includes('-'))
 .filter(([day, month, year]) => day > 0 && day <= 31 && month > 0 && month <= 12)
 .map(e => e.join('-'));
 
-console.log(filtredByDash)
+console.log(filtredByDash);
 
 const filtredBySlash = arr.filter(el => el.includes('/'))
 .map(el => el.split('/'))
 .filter(([month, day, year]) => month > 0 && month <= 12 && day > 0 && day <= 31)
 .map(([month, day, year]) => [day, month, year].join('-'));
 
-console.log(filtredBySlash)
+console.log(filtredBySlash);
 
 const result = [filtredByDash, filtredBySlash];
 
 for (let i = 0; i < result.length; i++) {
-	for(let j = 0; j < result[i].length; j++) {
+	for (let j = 0; j < result[i].length; j++) {
 		console.log(result[i][j]);	
 	}
 }
