@@ -8,7 +8,7 @@ const arr = ['10-02-2022', 'тест', '11/12/2023', '00/13/2022', '41/12/2023',
 const filtredByDash = arr.filter(el => el.includes('-'))
 .map(el => el.split('-'))
 .filter(([day, month, year]) => day > 0 && day <= 31 && month > 0 && month <= 12)
-.map(e => e.join('-'));
+.map(el => el.join('-'));
 
 console.log(filtredByDash);
 
