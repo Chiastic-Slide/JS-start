@@ -2,7 +2,7 @@
 const card = '4561-2612-1234-5464';
 
 const theLuhnAlgorithm = string => {
-	const cardNumber = string.replaceAll('-', '').split('').map(el => Number(el)); // 
+	const cardNumber = string.replaceAll('-', '').split('').map(el => Number(el));
 	let oddNumbers = [];
 	let evenNumbers = [];
 		for (let i = 0; i < cardNumber.length; i += 2) {
